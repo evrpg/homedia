@@ -74,14 +74,14 @@ class QuickConnectViewModel @Inject constructor(
     }
 
     private fun storeAccessToken(authenticationResult: AuthenticationResult) {
-        JellyfinManager.api.accessToken = authenticationResult.accessToken
+        JellyfinManager.api.update(accessToken = authenticationResult.accessToken)
         authenticationResult.accessToken?.let {
             preferencesManager.saveData("ACCESS_TOKEN", it, true)
         }
     }
 
     private fun storeUserId(authenticationResult: AuthenticationResult) {
-        JellyfinManager.api.userId = authenticationResult.user?.id
+//        JellyfinManager.api.userId = authenticationResult.user?.id
         authenticationResult.user?.id.let {
             preferencesManager.saveData("USER_ID", it.toString())
         }

@@ -93,9 +93,9 @@ fun Modifier.handleDPadKeyEvents(
 
 suspend fun ByteReadChannel.byteReadChannelToBitmap(): Bitmap? {
     val limit: Long = 1024 * 1024
-    val headerSizeHint = 1024
+//    val headerSizeHint = 1024
     val byteArray = withContext(Dispatchers.IO) {
-        this@byteReadChannelToBitmap.readRemaining(limit, headerSizeHint).readBytes()
+        this@byteReadChannelToBitmap.readRemaining(limit).readBytes()
     }
     return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
 }

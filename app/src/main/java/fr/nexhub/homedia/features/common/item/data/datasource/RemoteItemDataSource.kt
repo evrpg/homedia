@@ -13,7 +13,9 @@ import fr.nexhub.homedia.utils.getItemImage
 import fr.nexhub.homedia.utils.toItem
 import org.jellyfin.sdk.api.client.exception.InvalidStatusException
 import org.jellyfin.sdk.api.client.extensions.itemsApi
+import org.jellyfin.sdk.api.client.extensions.userApi
 import org.jellyfin.sdk.model.api.BaseItemKind
+import org.jellyfin.sdk.model.api.ItemSortBy
 import org.jellyfin.sdk.model.api.SortOrder
 import java.util.UUID
 import javax.inject.Inject
@@ -22,10 +24,10 @@ class RemoteItemDataSource @Inject constructor(): ItemDataSource {
     override suspend fun getItems(libraryId: UUID, limit: Int?): Either<NetworkError, List<Item>> {
         return try {
             val resp = JellyfinManager.api.itemsApi.getItems(
-                userId = JellyfinManager.api.userId,
+                userId = JellyfinManager.api.userApi.getCurrentUser().content.id,
                 parentId = libraryId,
                 includeItemTypes = listOf(BaseItemKind.MOVIE, BaseItemKind.SERIES),
-                sortBy = listOf("DateCreated"),
+                sortBy = listOf(ItemSortBy.DATE_CREATED),
                 sortOrder = listOf(SortOrder.DESCENDING),
                 limit = limit
             )

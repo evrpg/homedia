@@ -11,6 +11,7 @@ import fr.nexhub.homedia.network.toGeneralError
 import fr.nexhub.homedia.utils.toLibrary
 import org.jellyfin.sdk.api.client.exception.InvalidStatusException
 import org.jellyfin.sdk.api.client.extensions.itemsApi
+import org.jellyfin.sdk.api.client.extensions.userApi
 import javax.inject.Inject
 
 class RemoteLibraryDataSource @Inject constructor(
@@ -19,7 +20,7 @@ class RemoteLibraryDataSource @Inject constructor(
     override suspend fun getLibraries(): Either<NetworkError, List<Library>> {
         return try {
             val resp = JellyfinManager.api.itemsApi.getItems(
-                userId = JellyfinManager.api.userId,
+                userId = JellyfinManager.api.userApi.getCurrentUser().content.id,
             )
             val items = resp.content.items
             val list: MutableList<Library> = mutableListOf()

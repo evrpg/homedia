@@ -16,13 +16,13 @@ object JellyfinManager {
     fun initSDK(currentContext: Context, baseUrl: String, accessToken: String?, userId: UUID?) {
         val jellyfin =  createJellyfin {
             context = currentContext
-            clientInfo = ClientInfo(name = "jellyfin_androidTV_client", version = "1.45")
+            clientInfo = ClientInfo(name = "jellyfin_androidTV_client", version = "1.63")
         }
 
         _api = jellyfin.createApi(
             baseUrl = baseUrl,
             accessToken = accessToken,
-            userId = userId
+//            userId = userId
         )
     }
 }
