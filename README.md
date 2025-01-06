@@ -11,27 +11,19 @@ This project is a fork of the original repository created by Umair Khalid, avail
 
 ## Top features 
 ### Home
-
-<img width="1198" src="https://github.com/valmnt/homedia/assets/46025586/0110263c-ffcf-4477-8c38-4d0db88fd5be">
+*To be uploaded*
 
 ### Items
-
-<img width="400" src="https://github.com/valmnt/homedia/assets/46025586/48432d13-7380-4b00-a8cc-4bfc39e52ea9">
-<img width="400" src="https://github.com/valmnt/homedia/assets/46025586/6a9c4808-fff3-424b-9af4-976e6da08519">
+*To be uploaded*
 
 ### Item
-
-<img width="250" src="https://github.com/valmnt/homedia/assets/46025586/e57550c6-7ff6-45a7-9e90-1b8c52507bc3">
-<img width="250" src="https://github.com/valmnt/homedia/assets/46025586/a8861979-6a3e-4449-ad37-c3b6e915259d">
-<img width="250" src="https://github.com/valmnt/homedia/assets/46025586/5ea14725-2e65-43b0-86b3-74404e23ecba">
+*To be uploaded*
 
 ### Player
-
-https://github.com/valmnt/homedia/assets/46025586/be43276e-d45e-4a30-bb72-42e35c33d580
+*To be uploaded*
 
 ### Overview
-
-![overview(1)](https://github.com/valmnt/homedia/assets/46025586/1e1fc664-3eb1-49b6-a4f1-860497ac505c)
+*To be uploaded*
 
 ## Special Guidlines for Hacktoberfest
 
